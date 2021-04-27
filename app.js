@@ -31,4 +31,4 @@ app.get("/", (req, res) => {
   res.send("API em execucao");
 });
 
-app.listen(8080 || 8081, () => {});
+app.listen(8080);
