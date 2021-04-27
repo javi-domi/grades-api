@@ -1,6 +1,8 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
 
 import { db } from "./models/index.js";
 import { gradeRouter } from "./routes/gradeRouter.js";
@@ -31,4 +33,4 @@ app.get("/", (req, res) => {
   res.send("API em execucao");
 });
 
-app.listen(8081);
+app.listen(process.env.PORT);
